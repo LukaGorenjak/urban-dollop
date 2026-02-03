@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Investment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinancialPortfolioManager\\Investment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinancialPortfolioManager\\Portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinancialPortfolioManager\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinancialPortfolioManager\\Transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\StockInvestment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinancialPortfolioManager\\StockInvestment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\InvestmentType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinancialPortfolioManager\\InvestmentType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinancialPortfolioManager\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\CryptoInvestment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinancialPortfolioManager\\CryptoInvestment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Program.cs",
+              "RelativeDocumentMoniker": "FinancialPortfolioManager\\Program.cs",
+              "ToolTip": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Program.cs",
+              "RelativeToolTip": "FinancialPortfolioManager\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T08:12:00.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Transaction.cs",
+              "RelativeDocumentMoniker": "FinancialPortfolioManager\\Transaction.cs",
+              "ToolTip": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Transaction.cs",
+              "RelativeToolTip": "FinancialPortfolioManager\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:19:48.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InvestmentType.cs",
+              "DocumentMoniker": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\InvestmentType.cs",
+              "RelativeDocumentMoniker": "FinancialPortfolioManager\\InvestmentType.cs",
+              "ToolTip": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\InvestmentType.cs",
+              "RelativeToolTip": "FinancialPortfolioManager\\InvestmentType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T18:36:49.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Form1.cs",
+              "RelativeDocumentMoniker": "FinancialPortfolioManager\\Form1.cs",
+              "ToolTip": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Form1.cs",
+              "RelativeToolTip": "FinancialPortfolioManager\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T15:58:22.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Portfolio.cs",
+              "DocumentMoniker": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Portfolio.cs",
+              "RelativeDocumentMoniker": "FinancialPortfolioManager\\Portfolio.cs",
+              "ToolTip": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Portfolio.cs",
+              "RelativeToolTip": "FinancialPortfolioManager\\Portfolio.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T12:21:41.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CryptoInvestment.cs",
+              "DocumentMoniker": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\CryptoInvestment.cs",
+              "RelativeDocumentMoniker": "FinancialPortfolioManager\\CryptoInvestment.cs",
+              "ToolTip": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\CryptoInvestment.cs",
+              "RelativeToolTip": "FinancialPortfolioManager\\CryptoInvestment.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T10:38:01.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StockInvestment.cs",
+              "DocumentMoniker": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\StockInvestment.cs",
+              "RelativeDocumentMoniker": "FinancialPortfolioManager\\StockInvestment.cs",
+              "ToolTip": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\StockInvestment.cs",
+              "RelativeToolTip": "FinancialPortfolioManager\\StockInvestment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T10:37:42.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Investment.cs",
+              "DocumentMoniker": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Investment.cs",
+              "RelativeDocumentMoniker": "FinancialPortfolioManager\\Investment.cs",
+              "ToolTip": "C:\\Users\\goren\\source\\repos\\FinancialPortfolioManager\\FinancialPortfolioManager\\Investment.cs",
+              "RelativeToolTip": "FinancialPortfolioManager\\Investment.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwFwAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T10:31:28.993Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\bin\Debug\net8.0-windows\FinancialPortfolioManager.exe
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\bin\Debug\net8.0-windows\FinancialPortfolioManager.deps.json
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\bin\Debug\net8.0-windows\FinancialPortfolioManager.runtimeconfig.json
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\bin\Debug\net8.0-windows\FinancialPortfolioManager.dll
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\bin\Debug\net8.0-windows\FinancialPortfolioManager.pdb
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.Form1.resources
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.csproj.GenerateResource.cache
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.AssemblyInfoInputs.cache
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.AssemblyInfo.cs
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.csproj.CoreCompileInputs.cache
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.dll
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\refint\FinancialPortfolioManager.dll
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.pdb
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\FinancialPortfolioManager.genruntimeconfig.cache
+C:\Users\goren\source\repos\FinancialPortfolioManager\FinancialPortfolioManager\obj\Debug\net8.0-windows\ref\FinancialPortfolioManager.dll
