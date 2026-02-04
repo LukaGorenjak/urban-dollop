@@ -38,7 +38,8 @@ namespace FinancialPortfolioManager
 
             if (string.IsNullOrWhiteSpace(tickerTextBox.Text) ||
                 string.IsNullOrWhiteSpace(nameTextBox.Text) ||
-                string.IsNullOrWhiteSpace(priceTextBox.Text))
+                string.IsNullOrWhiteSpace(priceTextBox.Text) ||
+                string.IsNullOrWhiteSpace(amountTextBox.Text))
             {
                 MessageBox.Show("Please fill all fields");
                 return;
@@ -50,49 +51,52 @@ namespace FinancialPortfolioManager
                 return;
             }
 
+            if (!decimal.TryParse(amountTextBox.Text, out decimal amount) || amount <= 0)
+            {
+                MessageBox.Show("Invalid amount");
+                return;
+            }
+
+            decimal totalCost = price * amount;
+
+            if (!portfolio1.Withdraw(totalCost))
+            {
+                MessageBox.Show("Not enough cash!");
+                return;
+            }
+
             Investment investment;
-
-            decimal totalCost = price * amountPicker.Value;
-
             if (comboBox1.SelectedItem.ToString() == "Stock")
             {
-
-                if (!portfolio1.Withdraw(totalCost))
-                {
-                    MessageBox.Show("Not enough cash!");
-                    return;
-                }
-                else
-                {
-                    investment = new StockInvestment(
-                        tickerTextBox.Text.Trim().ToUpper(),
-                        nameTextBox.Text,
-                        amountPicker.Value,
-                        price
-                        );
-                    portfolio1.Withdraw(totalCost);
-                }
+                investment = new StockInvestment(
+                    tickerTextBox.Text.Trim().ToUpper(),
+                    nameTextBox.Text,
+                    amount,
+                    price
+                );
             }
             else
             {
-
-                if (!portfolio1.Withdraw(totalCost))
-                {
-                    MessageBox.Show("Not enough cash!");
-                    return;
-                }
-                else
-                {
-                    investment = new CryptoInvestment(
-                        tickerTextBox.Text.Trim().ToUpper(),
-                        nameTextBox.Text,
-                        amountPicker.Value,
-                        price
-                        );
-                    portfolio1.Withdraw(totalCost);
-                }
+                investment = new CryptoInvestment(
+                    tickerTextBox.Text.Trim().ToUpper(),
+                    nameTextBox.Text,
+                    amount,
+                    price
+                );
             }
 
+            var tx = new Transaction(
+                tickerTextBox.Text.Trim().ToUpper(),
+                nameTextBox.Text,
+                amount,
+                price,
+                investment.Type
+            )
+            {
+                IsBuy = true
+            };
+
+            portfolio1.AddTransaction(tx, true);
             portfolio1.AddInvestment(investment);
 
             UpdateInvestmentsList();
@@ -149,8 +153,9 @@ namespace FinancialPortfolioManager
 
             foreach (var tx in portfolio1.GetTransactions())
             {
+                string action = tx.IsBuy ? "BUY" : "SELL";
                 transactionsListBox.Items.Add(
-                    $"{tx.Date:dd.MM HH:mm} | BUY {tx.Ticker} x{tx.Amount} @ {tx.Price:N2} ({tx.TotalValue:N2})"
+                    $"{tx.Date:dd.MM HH:mm} | {action} {tx.Ticker} x{tx.Amount} @ {tx.Price:N2} ({tx.TotalValue:N2})"
                 );
             }
         }
@@ -198,6 +203,82 @@ namespace FinancialPortfolioManager
                 groupBox2.ForeColor = Color.Black;
                 groupBox3.ForeColor = Color.Black;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Please select an investment type!");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tickerTextBox.Text) ||
+                string.IsNullOrWhiteSpace(nameTextBox.Text) ||
+                string.IsNullOrWhiteSpace(priceTextBox.Text))
+            {
+                MessageBox.Show("Please fill all fields");
+                return;
+            }
+
+            if (!decimal.TryParse(priceTextBox.Text, out decimal price))
+            {
+                MessageBox.Show("Invalid price");
+                return;
+            }
+
+            if (!decimal.TryParse(amountTextBox.Text, out decimal amountToSell) || amountToSell <= 0)
+            {
+                MessageBox.Show("Invalid amount to sell.");
+                return;
+            }
+            string ticker = tickerTextBox.Text.Trim().ToUpper();
+            string name = nameTextBox.Text.Trim();
+            string typeString = comboBox1.SelectedItem.ToString();
+
+            // Find the investment to sell
+            var investment = portfolio1.GetInvestments()
+                .FirstOrDefault(inv => inv.Ticker == ticker && inv.Name == name && inv.Type.ToString() == typeString);
+
+            if (investment == null)
+            {
+                MessageBox.Show("You do not own this investment.");
+                return;
+            }
+
+            // Use a small tolerance for decimal comparison
+            const decimal tolerance = 0.00001m;
+
+            if (amountToSell <= 0 || amountToSell - investment.Amount > tolerance)
+            {
+                MessageBox.Show("Invalid amount to sell.");
+                return;
+            }
+
+            // If selling (almost) all, treat as full sale
+            if (Math.Abs(investment.Amount - amountToSell) < tolerance)
+            {
+                amountToSell = investment.Amount; // Ensure exact
+                portfolio1.RemoveInvestment(investment);
+            }
+            else
+            {
+                investment.Amount -= amountToSell;
+            }
+
+            // Add cash to portfolio
+            decimal totalProceeds = price * amountToSell;
+            portfolio1.Deposit(totalProceeds);
+
+            // Add transaction record
+            var tx = new Transaction(ticker, name, amountToSell, price, investment.Type)
+            {
+                IsBuy = false
+            };
+            portfolio1.AddTransaction(tx, false);
+
+            UpdateInvestmentsList();
+            UpdateTransactionsList();
         }
     }
 }

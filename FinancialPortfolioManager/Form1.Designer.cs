@@ -44,6 +44,8 @@
             investmentsListBox = new ListBox();
             label4 = new Label();
             groupBox3 = new GroupBox();
+            label10 = new Label();
+            amountTextBox = new TextBox();
             numericUpDownAmount1 = new NumericUpDown();
             withdrawButton = new Button();
             label8 = new Label();
@@ -54,7 +56,6 @@
             label6 = new Label();
             tickerTextBox = new TextBox();
             button2 = new Button();
-            amountPicker = new NumericUpDown();
             button1 = new Button();
             priceTextBox = new TextBox();
             button5 = new Button();
@@ -66,7 +67,6 @@
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownAmount1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)amountPicker).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -188,6 +188,8 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(label10);
+            groupBox3.Controls.Add(amountTextBox);
             groupBox3.Controls.Add(numericUpDownAmount1);
             groupBox3.Controls.Add(withdrawButton);
             groupBox3.Controls.Add(label8);
@@ -198,7 +200,6 @@
             groupBox3.Controls.Add(label6);
             groupBox3.Controls.Add(tickerTextBox);
             groupBox3.Controls.Add(button2);
-            groupBox3.Controls.Add(amountPicker);
             groupBox3.Controls.Add(button1);
             groupBox3.Controls.Add(priceTextBox);
             groupBox3.Location = new Point(491, 243);
@@ -206,6 +207,22 @@
             groupBox3.Size = new Size(421, 300);
             groupBox3.TabIndex = 3;
             groupBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(250, 245);
+            label10.Name = "label10";
+            label10.Size = new Size(62, 20);
+            label10.TabIndex = 14;
+            label10.Text = "Amount";
+            // 
+            // amountTextBox
+            // 
+            amountTextBox.Location = new Point(318, 242);
+            amountTextBox.Name = "amountTextBox";
+            amountTextBox.Size = new Size(54, 27);
+            amountTextBox.TabIndex = 13;
             // 
             // numericUpDownAmount1
             // 
@@ -294,15 +311,7 @@
             button2.TabIndex = 5;
             button2.Text = "SELL";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // amountPicker
-            // 
-            amountPicker.Location = new Point(318, 242);
-            amountPicker.Minimum = new decimal(new int[] { 1, 0, 0, 262144 });
-            amountPicker.Name = "amountPicker";
-            amountPicker.Size = new Size(54, 27);
-            amountPicker.TabIndex = 4;
-            amountPicker.Value = new decimal(new int[] { 1, 0, 0, 262144 });
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -318,7 +327,7 @@
             // 
             priceTextBox.Location = new Point(96, 242);
             priceTextBox.Name = "priceTextBox";
-            priceTextBox.Size = new Size(216, 27);
+            priceTextBox.Size = new Size(148, 27);
             priceTextBox.TabIndex = 0;
             // 
             // button5
@@ -391,7 +400,6 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownAmount1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)amountPicker).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -414,7 +422,6 @@
         private Button button1;
         private TextBox priceTextBox;
         private Button button2;
-        private NumericUpDown amountPicker;
         private Button depositButton;
         private Button button5;
         private Button button6;
@@ -431,5 +438,7 @@
         private NumericUpDown numericUpDownAmount1;
         private ListBox transactionsListBox;
         private Label label9;
+        private Label label10;
+        private TextBox amountTextBox;
     }
 }

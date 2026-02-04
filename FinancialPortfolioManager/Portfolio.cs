@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -115,6 +115,17 @@ namespace FinancialPortfolioManager
             if (total == 0) return 0;
 
             return (GetValueByType(type) / total) * 100;
+        }
+
+        public void RemoveInvestment(Investment investment)
+        {
+            investments.Remove(investment);
+        }
+
+        public void AddTransaction(Transaction transaction, bool isBuy)
+        {
+            transaction.IsBuy = isBuy;
+            transactions.Add(transaction);
         }
 
         public static Portfolio operator +(Portfolio a, Portfolio b)

@@ -26,5 +26,7 @@ namespace FinancialPortfolioManager
         }
 
         public decimal TotalValue => Amount * Price;
+
+        public bool IsBuy { get; set; }
     }
 }
