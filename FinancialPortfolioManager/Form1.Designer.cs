@@ -1,4 +1,4 @@
-﻿namespace FinancialPortfolioManager
+namespace FinancialPortfolioManager
 {
     partial class Form1
     {

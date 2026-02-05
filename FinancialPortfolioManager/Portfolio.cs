@@ -60,13 +60,6 @@ namespace FinancialPortfolioManager
                 investments.Add(investment);
             }
 
-            transactions.Add(new Transaction(
-                investment.Ticker,
-                investment.Name,
-                investment.Amount,
-                investment.BuyPrice,
-                investment.Type
-            ));
         }
 
 
@@ -86,7 +79,8 @@ namespace FinancialPortfolioManager
 
             //return totalSum;
 
-            return CashBalance + investments.Sum(i => i.GetValue());
+            // Uporaba lastne knjižnice in vmesnika IValuable.
+            return CashBalance + FinancialPortfolioManager.Library.PortfolioLibrary.CalculateTotalValue(investments);
         }
 
         public decimal GetTotalProfitLoss()
@@ -120,6 +114,21 @@ namespace FinancialPortfolioManager
         public void RemoveInvestment(Investment investment)
         {
             investments.Remove(investment);
+        }
+
+        public Investment this[int index]
+        {
+            get { return investments[index]; }
+        }
+
+        public Investment this[string ticker]
+        {
+            get
+            {
+                return investments.FirstOrDefault(
+                    i => i.Ticker.Equals(ticker, StringComparison.OrdinalIgnoreCase)
+                );
+            }
         }
 
         public void AddTransaction(Transaction transaction, bool isBuy)

@@ -57,6 +57,12 @@ namespace FinancialPortfolioManager
                 return;
             }
 
+            if (amount < Investment.MIN_INVESTMENT_AMOUNT)
+            {
+                MessageBox.Show($"Amount must be at least {Investment.MIN_INVESTMENT_AMOUNT}.");
+                return;
+            }
+
             decimal totalCost = price * amount;
 
             if (!portfolio1.Withdraw(totalCost))
@@ -119,28 +125,17 @@ namespace FinancialPortfolioManager
         }
         private void UpdateInvestmentsList()
         {
-            //investmentsListBox.Items.Clear();
-
-            //investmentsListBox.Items.Add(
-            //    $"Cash: {portfolio1.CashBalance:N2} {Portfolio.currency}"
-            //);
-
-            //foreach (var investment in portfolio1.GetInvestments())
-            //{
-            //    investmentsListBox.Items.Add(
-            //        $"{investment.Name} | {investment.Amount} @ {investment.BuyPrice:N2} {Portfolio.currency}"
-            //    );
-            //}
-
             investmentsListBox.Items.Clear();
-
 
             investmentsListBox.Items.Add(
                 $"Cash: {portfolio1.CashBalance:N2} {Portfolio.currency}"
             );
 
-            foreach (var inv in portfolio1.GetInvestments())
+            var investments = portfolio1.GetInvestments();
+            for (int i = 0; i < investments.Count; i++)
             {
+                // uporaba indekserja po indeksu
+                var inv = portfolio1[i];
                 investmentsListBox.Items.Add(
                     $"{inv.Ticker} | {inv.Amount} | Avg {inv.BuyPrice:N2} {Portfolio.currency}"
                 );
@@ -236,11 +231,10 @@ namespace FinancialPortfolioManager
             string name = nameTextBox.Text.Trim();
             string typeString = comboBox1.SelectedItem.ToString();
 
-            // Find the investment to sell
-            var investment = portfolio1.GetInvestments()
-                .FirstOrDefault(inv => inv.Ticker == ticker && inv.Name == name && inv.Type.ToString() == typeString);
+            // Find the investment to sell – uporaba indekserja po tickerju
+            var investment = portfolio1[ticker];
 
-            if (investment == null)
+            if (investment == null || investment.Name != name || investment.Type.ToString() != typeString)
             {
                 MessageBox.Show("You do not own this investment.");
                 return;
@@ -255,10 +249,9 @@ namespace FinancialPortfolioManager
                 return;
             }
 
-            // If selling (almost) all, treat as full sale
             if (Math.Abs(investment.Amount - amountToSell) < tolerance)
             {
-                amountToSell = investment.Amount; // Ensure exact
+                amountToSell = investment.Amount; 
                 portfolio1.RemoveInvestment(investment);
             }
             else
@@ -266,11 +259,9 @@ namespace FinancialPortfolioManager
                 investment.Amount -= amountToSell;
             }
 
-            // Add cash to portfolio
             decimal totalProceeds = price * amountToSell;
             portfolio1.Deposit(totalProceeds);
 
-            // Add transaction record
             var tx = new Transaction(ticker, name, amountToSell, price, investment.Type)
             {
                 IsBuy = false

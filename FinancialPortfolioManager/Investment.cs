@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinancialPortfolioManager
 {
-    public abstract class Investment
+    public abstract class Investment : IValuable
     {
         public const decimal MIN_INVESTMENT_AMOUNT = 0.01m;
 
@@ -56,6 +56,14 @@ namespace FinancialPortfolioManager
         }
 
         public abstract decimal GetValue();
+
+        public string Summary
+        {
+            get
+            {
+                return $"{Ticker} - {Name}: {Amount} @ {BuyPrice:N2} ({Type})";
+            }
+        }
 
         public virtual decimal GetProfitLoss()
         {
