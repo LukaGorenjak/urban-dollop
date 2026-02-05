@@ -105,7 +105,7 @@ namespace FinancialPortfolioManager
 
         ~Investment()
         {
-
+            System.Diagnostics.Debug.WriteLine($"[Destruktor] Investment {Ticker} je bil finaliziran.");
         }
     }
 }
